@@ -18,7 +18,9 @@ func JsonApi(c *gin.Context) {
 	ws, err := upGrader.Upgrade(c.Writer, c.Request, nil)
 	if err != nil {
 		log.Printf("error get connection: %v", err)
-		log.Fatal(err)
+		log.Printf("err: %v", err)
+		c.Error(err)
+		return
 	}
 	defer ws.Close()
 

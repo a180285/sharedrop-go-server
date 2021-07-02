@@ -7,9 +7,8 @@ import (
 )
 
 type AuthInfo struct {
-	Label                string                 `json:"label"`
-	AvatarUrl            string                 `json:"avatar_url"`
-	WebrtcConnectionInfo map[string]interface{} `json:"webrtc_connection_info"`
+	Label     string `json:"label"`
+	AvatarUrl string `json:"avatar_url"`
 }
 
 type PeerMessage struct {
